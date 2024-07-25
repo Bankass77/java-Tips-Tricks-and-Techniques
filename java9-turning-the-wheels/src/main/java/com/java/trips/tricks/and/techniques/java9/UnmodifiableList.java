@@ -24,6 +24,15 @@ public class UnmodifiableList {
 
         System.out.println("Printing list of multiple elements.");
         employeeList2.forEach(System.out::println);
+
+        // Toute List crée avec les factory Method sont par défaut unmodifiable. On ne peut pas modifiér la List
+        List<String> strList = List.of("John", "Dave", "Vivian");
+
+        // On voulant modifié la List on lève l'exception du type "UnsupportedOperationException
+        strList.add("Emma");
+
+        System.out.println(strList);
+
     }
 
 }
