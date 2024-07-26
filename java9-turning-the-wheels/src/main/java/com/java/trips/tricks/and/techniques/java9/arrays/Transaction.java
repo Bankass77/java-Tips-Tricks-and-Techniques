@@ -1,4 +1,4 @@
-package com.java.trips.tricks.and.techniques.java9;
+package com.java.trips.tricks.and.techniques.java9.arrays;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

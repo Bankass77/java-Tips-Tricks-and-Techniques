@@ -1,4 +1,4 @@
-package com.java.trips.tricks.and.techniques.java9;
+package com.java.trips.tricks.and.techniques.java9.collectionsAPiUpdate;
 
 import java.util.List;
 

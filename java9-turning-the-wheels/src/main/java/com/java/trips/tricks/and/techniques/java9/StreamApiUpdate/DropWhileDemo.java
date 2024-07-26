@@ -1,7 +1,6 @@
-package com.java.trips.tricks.and.techniques.java9;
+package com.java.trips.tricks.and.techniques.java9.StreamApiUpdate;
 
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 /**
