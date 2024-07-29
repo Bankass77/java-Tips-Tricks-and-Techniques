@@ -1,8 +1,12 @@
 package com.java.trips.tricks.and.techniques.java9.FlowApi;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.flogger.Flogger;
 
 import java.util.concurrent.Flow;
+import java.util.logging.Logger;
+
+import static com.java.trips.tricks.and.techniques.java9.FlowApi.BookPublisher.logger;
 
 /**
  * Subscriber : Un abonné aux données. Il reçoit les éléments publiés par un Publisher. Donc, il reçoit et traite les éléments.
@@ -10,6 +14,8 @@ import java.util.concurrent.Flow;
 @RequiredArgsConstructor
 public class BookSubcriber implements Flow.Subscriber<Book> {
 
+
+   static Logger log = Logger.getLogger(BookSubcriber.class.getName());
     private Flow.Subscription subscription;
 
     private String subcriberName;
@@ -43,7 +49,13 @@ public class BookSubcriber implements Flow.Subscriber<Book> {
     @Override
     public void onNext(Book book) {
         subscription.request(1);
-        System.out.println(book + ", Received by: " + this.subcriberName);
+         logger.info(book + ", Received by: " + this.subcriberName);
+
+        if(book.getBookName().equals("Java 17")){
+
+            logger.info(subcriberName +  " cancelling subcription.");
+            subscription.cancel();
+        }
     }
 
     /**
@@ -53,7 +65,7 @@ public class BookSubcriber implements Flow.Subscriber<Book> {
      */
     @Override
     public void onError(Throwable throwable) {
-        System.out.println(" Error: " + throwable.getMessage());
+         logger.info(" Error: " + throwable.getMessage());
 
     }
 
@@ -62,7 +74,7 @@ public class BookSubcriber implements Flow.Subscriber<Book> {
      */
     @Override
     public void onComplete() {
-        System.out.println(this.subcriberName + "got all the books");
+         logger.info(this.subcriberName + " " + "got all the books");
 
     }
 }
