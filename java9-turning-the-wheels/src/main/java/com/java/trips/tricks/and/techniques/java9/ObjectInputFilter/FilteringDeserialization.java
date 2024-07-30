@@ -23,7 +23,7 @@ public class FilteringDeserialization {
     private static void filteringByClass() throws IOException {
         FileInputStream is = new FileInputStream("src/main/resources/emp.dat");
         try(ObjectInputStream ois = new ObjectInputStream(is)) {
-            ois.setObjectInputFilter(new FilterEmployee());
+            ois.setObjectInputFilter(new com.java.trips.tricks.and.techniques.java9.ObjectInputFilter.FilterEmployee());
             try {
 
                 Employee employee = (Employee) ois.readObject();
@@ -38,7 +38,7 @@ public class FilteringDeserialization {
     private static void filteringByMethod() throws IOException {
         FileInputStream is = new FileInputStream("src/main/resources/emp.dat");
         try(ObjectInputStream ois = new ObjectInputStream(is)) {
-            ois.setObjectInputFilter(FilterEmployeeByPackage::empFilter);
+            ois.setObjectInputFilter(com.java.trips.tricks.and.techniques.java9.ObjectInputFilter.FilterEmployeeByPackage::empFilter);
 
             Employee employee = (Employee) ois.readObject();
             System.out.println("Employe object after applying filter: " + "\n" + employee);

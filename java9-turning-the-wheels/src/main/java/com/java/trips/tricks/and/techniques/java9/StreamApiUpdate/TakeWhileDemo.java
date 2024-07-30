@@ -7,13 +7,16 @@ import java.util.Set;
 /**
  * Si vous souhaitez interrompre les itérations des éléments d'un flux (stream) à partir de la première occurrence où la condition échoue, vous pouvez utiliser
  * la méthode takeWhile(). La méthode takeWhile() prend un prédicat comme argument, et l'itération est terminée lorsque la condition de test échoue pour un
- * élément particulier.
+ * élément particulier. takeWhile() est utilisé pour prendre des éléments tant qu'une condition est vraie, tandis que limit() prend un nombre fixe d'éléments
  */
 public class TakeWhileDemo {
 
     public static void main(String[] args) {
-        List<Product> products = Arrays.asList(new Product("Denim Jeans", "Garment", 1500.00), new Product("T shirt", "Garment", 500.00),
-                new Product("Nike", "Sports", 400.00), new Product("Kurtis", "Garment", 150.00));
+        List<com.java.trips.tricks.and.techniques.java9.StreamApiUpdate.Product> products = Arrays.asList(
+                new com.java.trips.tricks.and.techniques.java9.StreamApiUpdate.Product("Denim Jeans", "Garment", 1500.00),
+                new com.java.trips.tricks.and.techniques.java9.StreamApiUpdate.Product("T shirt", "Garment", 500.00),
+                new com.java.trips.tricks.and.techniques.java9.StreamApiUpdate.Product("Nike", "Sports", 400.00),
+                new com.java.trips.tricks.and.techniques.java9.StreamApiUpdate.Product("Kurtis", "Garment", 150.00));
 
         System.out.println("-----Utilisation de la méthode takeWhile sur le stream----------------");
         // le filter n'a pas le même comportement que le takeWhile, puis que ce dernier prend un predicateur en argument

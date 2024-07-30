@@ -24,12 +24,13 @@ public class FilterEmployeeByPackage {
 
             //vérifier si l'objet désérialisé fait partie d'un package spécifique
             // retourne ObjectInputFilter.Status:
-            //ALLOWED si la classe de l'objet en cours de désérialisation appartient au package java.util.
-            //REJECTED si la classe de l'objet en cours de désérialisation n'appartient pas au package java.util.
+            //ALLOWED si la classe de l'objet en cours de désérialisation appartient au package java.util.;Indique que l'objet lu peut être désérialisé et utilisé
+            //REJECTED si la classe de l'objet en cours de désérialisation n'appartient pas au package java.util.; indique que l'objet lu ne peut pas être désérialisé
             //UNDECIDED si la classe de l'objet en cours de désérialisation est null.
             return serialClass.getPackage().getName().equals("java.util") ? ObjectInputFilter.Status.ALLOWED : ObjectInputFilter.Status.REJECTED;
         }
 
+        //UNDECIDED: Indique que le filtre ne prend pas de décision définitive et permet à d'autres filtres ou mécanismes de prendre la décision finale.
         return ObjectInputFilter.Status.UNDECIDED;
     }
 
