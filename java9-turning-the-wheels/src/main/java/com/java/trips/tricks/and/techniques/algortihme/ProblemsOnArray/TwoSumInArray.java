@@ -1,4 +1,4 @@
-package com.java.trips.tricks.and.techniques.algortihme;
+package src.main.java.com.java.trips.tricks.and.techniques.algortihme.ProblemsOnArray;
 
 import java.util.Arrays;
 

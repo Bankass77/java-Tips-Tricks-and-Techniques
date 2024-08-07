@@ -1,4 +1,4 @@
-package com.java.trips.tricks.and.techniques.algortihme;
+package src.main.java.com.java.trips.tricks.and.techniques.algortihme.interview.testInterviewQuestions;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

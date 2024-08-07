@@ -1,4 +1,4 @@
-package src.main.java.com.java.trips.tricks.and.techniques.algortihme.interview;
+package src.main.java.com.java.trips.tricks.and.techniques.algortihme.interview.testInterviewQuestions;
 
 /**
  * La méthode sumRange devrait retourner la somme des entiers compris entre 10 et 100 inclusifs contenus

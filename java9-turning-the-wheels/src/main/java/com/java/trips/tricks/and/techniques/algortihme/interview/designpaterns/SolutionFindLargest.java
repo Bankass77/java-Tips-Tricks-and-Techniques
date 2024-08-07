@@ -1,4 +1,4 @@
-package src.main.java.com.java.trips.tricks.and.techniques.algortihme.interview;
+package src.main.java.com.java.trips.tricks.and.techniques.algortihme.interview.designpaterns;
 
 /**
  * Implémentez la méthode Algorithm.findLargest(int[] numbers)

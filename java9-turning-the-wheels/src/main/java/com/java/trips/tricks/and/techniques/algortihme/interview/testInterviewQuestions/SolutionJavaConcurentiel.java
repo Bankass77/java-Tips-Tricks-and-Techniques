@@ -1,4 +1,4 @@
-package src.main.java.com.java.trips.tricks.and.techniques.algortihme.interview;
+package src.main.java.com.java.trips.tricks.and.techniques.algortihme.interview.testInterviewQuestions;
 
 public class SolutionJavaConcurentiel {
 

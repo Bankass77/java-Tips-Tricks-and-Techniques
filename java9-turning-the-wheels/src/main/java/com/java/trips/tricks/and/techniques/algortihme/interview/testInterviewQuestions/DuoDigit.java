@@ -1,4 +1,4 @@
-package src.main.java.com.java.trips.tricks.and.techniques.algortihme.interview;
+package src.main.java.com.java.trips.tricks.and.techniques.algortihme.interview.testInterviewQuestions;
 
 import java.util.HashSet;
 import java.util.Set;
